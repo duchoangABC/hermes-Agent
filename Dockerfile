@@ -119,4 +119,4 @@ ENV HERMES_HOME=/opt/data
 ENV PATH="/opt/data/.local/bin:${PATH}"
 RUN mkdir -p /opt/data
 ENTRYPOINT [ "/usr/bin/tini", "-g", "--", "/opt/hermes/docker/entrypoint.sh" ]
-CMD sh -c "hermes dashboard --host 0.0.0.0 --port ${PORT:-9119} --no-open"
+CMD sh -c "hermes dashboard --host 0.0.0.0 --port ${PORT:-9119} --no-open --insecure"
